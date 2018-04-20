@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <form class="form" action="/juggling-trick" method="post">
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h3 class="heading-medium">What other things can you juggle with?</h3>
+              <span class="body-text">Select all that apply</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="juggling-item-1" name="juggling-items" type="checkbox" value="Animal carcasses" {{ checked("juggling-items", "Animal carcasses") }}>
+              <label for="juggling-item-1">Animal carcasses</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="juggling-item-2" name="juggling-items" type="checkbox" value="Mines" {{ checked("juggling-items", "Mines") }}>
+              <label for="juggling-item-2">Mines</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="juggling-item-3" name="juggling-items" type="checkbox" value="Chainsaws" {{ checked("juggling-items", "Chainsaws") }}>
+              <label for="juggling-item-3">Chainsaws</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="juggling-item-4" name="juggling-items" type="checkbox" value="Grenades" {{ checked("juggling-items", "Grenades") }}>
+              <label for="juggling-item-4">Grenades</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
